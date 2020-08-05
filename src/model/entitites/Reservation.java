@@ -1,11 +1,15 @@
-package Entitites;
+package model.entitites;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.concurrent.TimeUnit;
 
 public class Reservation {
     private Integer roomNumber;
     private Date checkIn;
     private Date checkOut;
+
+    private static SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
 
     public Reservation() {
     }
@@ -40,8 +44,11 @@ public class Reservation {
         this.checkOut = checkOut;
     }
 
-    public Integer duration () {
-        return 2;
+    public Long duration() {
+        //miliseconds of checkIn and checkOut
+        long diff = checkOut.getTime() - checkIn.getTime();
+        //miliseconds to days
+        return TimeUnit.DAYS.convert(diff, TimeUnit.MILLISECONDS);
     }
 
     public void updateDates(Date checkIn, Date checkOut) {
@@ -50,4 +57,16 @@ public class Reservation {
 
     }
 
+    @Override
+    public String toString() {
+        return "Room "
+                + roomNumber
+                + ", check-in: "
+                + sdf.format(checkIn)
+                + ", check-out: "
+                + sdf.format(checkOut)
+                + ", "
+                + duration()
+                + " nights.";
+    }
 }
