@@ -1,4 +1,4 @@
-# # [ExceptionsEx1](https://www.udemy.com/course/java-curso-completo/learn/lecture/10793870?components=buy_button%2Cdiscount_expiration%2Cgift_this_course%2Cpurchase%2Cdeal_badge%2Credeem_coupon#overview)
+# [ExceptionsEx1](https://www.udemy.com/course/java-curso-completo/learn/lecture/10793870?components=buy_button%2Cdiscount_expiration%2Cgift_this_course%2Cpurchase%2Cdeal_badge%2Credeem_coupon#overview)
 
 
 Fazer um programa para ler os dados de uma reserva de hotel (número do quarto, data
